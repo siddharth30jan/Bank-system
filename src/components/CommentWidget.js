@@ -54,7 +54,7 @@ const CommentWidget = () => {
             <input type="text" value={commentValue} placeholder="Add your comment here.." onChange={(e)=> {
                 setCommentValue(e.target.value)
             }} />
-            <button  disabled={commentValue == ''} style={{marginLeft: '15px'}} onClick={(e) =>{
+            <button  disabled={commentValue == ''} style={{marginLeft: '15px',background: 'blue',color: 'white',padding: '5px'}} onClick={(e) =>{
                 setComments([...comments,{id: Math.random() , message: commentValue, createdAt: new Date().toLocaleString()}])
                 setCommentValue('')
             } }>ADD COMMENT</button>
